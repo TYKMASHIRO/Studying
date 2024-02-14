@@ -82,3 +82,58 @@ yarn build
 提示
 
 在你完成自定义后，如果你想要使用 WebGAL 编辑器来方便地实时预览和进行资源管理，你可以将打包后的产物复制粘贴并替换掉编辑器目录下的 `packages/terre2/assets/templates/WebGAL_Template`，这样你可以将 WebGAL 编辑器内置的引擎换成自己定制过的。如果你的 WebGAL 仓库 和 WebGAL_Terre 仓库在同一目录下，你可以使用 `release-to-terre` 快捷脚本来执行
+
+[WebGAL 文档](https://docs.openwebgal.com/)[管理游戏资源](https://docs.openwebgal.com/resources.html)
+
+# 管理游戏资源
+
+[Mahiru](https://github.com/MakinoharaShoko)2024年1月21日小于 1 分钟
+
+------
+
+提示
+
+如果你使用图形化编辑器，你可以在左侧的工具栏中直接打开对应的资源文件夹。如果你基于源代码开发，该文件夹在 `public` 下。
+
+你的所有游戏剧本、图片、立绘都应该放在游戏工程对应的 `game` 文件夹下，目录对应的资源说明如下：
+
+| 文件夹     | 存放的资源                   |
+| :--------- | :--------------------------- |
+| animation  | 动画描述文件                 |
+| background | 用于存放背景图片、标题页背景 |
+| figure     | 用于存放人物立绘             |
+| scene      | 用于存放用户剧本             |
+| bgm        | 用于存放背景音乐             |
+| vocal      | 用于存放配音文件             |
+| video      | 用于存放视频                 |
+| tex        | 用于存放特效纹理文件d        |
+
+# 编辑游戏配置
+
+[Mahiru](https://github.com/MakinoharaShoko)2024年1月21日小于 1 分钟
+
+------
+
+在 `game` 文件夹下，有一个名为 `config.txt` 的文件，你可以在这个文件中填写你游戏的相关信息（使用图形化编辑器可以直接编辑）。
+
+| 参数          | 描述                                             |
+| :------------ | :----------------------------------------------- |
+| Game_name     | 游戏名称                                         |
+| Game_key      | 游戏识别码，长度 6-10 字符，不要与别的游戏重复   |
+| Title_img     | 标题图片，放在 `background` 文件夹               |
+| Title_bgm     | 标题背景音乐，放在 `bgm` 文件夹                  |
+| Game_Logo     | 游戏 Logo，可以显示多个，用 \| 分割              |
+| Textbox_theme | 游戏对话框风格，可选择 imss 风格或 standard 风格 |
+
+以下是配置文件示例：
+
+
+
+```text
+Game_name:WebGAL; 
+Game_key:0f33fdGr;
+Title_img:Title.png;
+Title_bgm:夏影.mp3;
+Game_Logo:WebGalEnter.png|bg.png;
+Textbox_theme:imss;
+```
