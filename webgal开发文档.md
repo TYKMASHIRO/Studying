@@ -207,7 +207,7 @@ command:content -arg1 -arg2 ......;comment
 
 的形式。
 
-其中，command 代表语句指令，比如 `bgm`、`changeFigure`、`choose`这样的指令，用于标明该语句对应的控制动作。而 `content`则代表语句的主要内容，比如 `bgm:Teabreak.mp3`表示的是播放一段音频文件作为 bgm。
+其中，command 代表语句指令，比如 `bgm`、`changeFigure`、`choose`这样的指令，用于标明该语句对应的控制动作。而 `content`则代表语句的主要内容比如 `bgm:Teabreak.mp3`表示的是播放一段音频文件作为 bgm。
 
 ### [#](https://docs.openwebgal.com/tech/#语句解析-iii-对话的特殊处理)语句解析 Ⅲ 对话的特殊处理
 
